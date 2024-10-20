@@ -101,7 +101,7 @@ resource "aws_security_group" "main_sg" {
   description = "Permitir SSH apenas de IP específico e tráfego de saída controlado"
   vpc_id      = aws_vpc.main_vpc.id
 
-  # Regras de entrada
+   Regras de entrada
   ingress {
     description      = "Allow SSH from a specific IP range"
     from_port        = 22
@@ -110,7 +110,7 @@ resource "aws_security_group" "main_sg" {
     cidr_blocks      = ["203.0.113.0/24"]
   }
 
-  # Regras de saída
+   Regras de saída
   egress {
     description      = "Allow HTTP and HTTPS outbound traffic"
     from_port        = 80
